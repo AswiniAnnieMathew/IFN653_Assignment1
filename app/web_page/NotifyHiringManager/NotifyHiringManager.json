@@ -790,9 +790,13 @@
     "cancelReason" : {
       "type" : "expression",
       "value" : [
-        "return $data.prospect && $data.prospect.offerResponse === \"Declined\"\r",
-        "  ? \"Offer declined by the prospect\"\r",
-        "  : \"Offer expired without a response\";"
+        "if (!$data.prospect) { return \"\"; }",
+        "if ($data.prospect.offerResponse === \"Declined\") { return \"Offer declined by the prospect\"; }",
+        "if ($data.prospect.offerResponse === \"Accepted\") {",
+        "\tif ($data.prospect.employingEntity === \"DBY\") { return \"DBY online signing link expired: contract not signed and KYC not completed within 7 days\"; }",
+        "\treturn \"APE physical contract deadline passed: signed contract and KYC not received within 7 days\";",
+        "}",
+        "return \"Offer expired without a response\";"
       ],
       "exposed" : false
     }

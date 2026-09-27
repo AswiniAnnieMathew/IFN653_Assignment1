@@ -453,6 +453,15 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="esign.service">
+      <firstName>DBY e-signing</firstName>
+      <lastName>Platform</lastName>
+      <jobTitle>Service account</jobTitle>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="HR Business Partner">
@@ -484,6 +493,10 @@
     </role>
     <role name="Admin">
       <displayName>Admin</displayName>
+    </role>
+    <role name="E-signing Service">
+      <displayName>E-signing Service</displayName>
+      <description>System account used by the DBY e-signing platform to confirm online contract signatures.</description>
     </role>
   </roles>
   <groups>
@@ -631,6 +644,12 @@
       <userName>Aswini Mathew</userName>
       <roleName>Admin</roleName>
       <groupName>IT Infra</groupName>
+      <groupParentPath>/qnab/Technology &amp; Data</groupParentPath>
+    </membership>
+    <membership>
+      <userName>esign.service</userName>
+      <roleName>E-signing Service</roleName>
+      <groupName>Digital</groupName>
       <groupParentPath>/qnab/Technology &amp; Data</groupParentPath>
     </membership>
   </memberships>

@@ -1,10 +1,10 @@
 {
-  "id" : "ReviseOfferForm",
-  "name" : "ReviseOfferForm",
+  "id" : "DBYCaptureContractSignatureForm",
+  "name" : "DBYCaptureContractSignatureForm",
   "type" : "form",
-  "uuid" : "c668cd75-05e1-4c7e-838f-6fc66d201c84",
+  "uuid" : "58f67c80-ba4f-4994-a982-adc81940a6d1",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1790432300428,
+  "lastUpdate" : 1790482080210,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "fea6e52f-a157-4e30-933c-55251166c08e",
+        "reference" : "06d173ae-0ef1-41d0-a842-143ad31a038d",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -42,7 +42,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayName }}"
+                  "value" : "DBY e-signing platform: signature and KYC callback (simulation)"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -53,7 +53,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "d36932d3-829a-4677-88a4-ecea0d3ed960",
+              "reference" : "224b5820-8f88-4c3d-bc34-3717da0c4d89",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -90,7 +90,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
+                  "value" : "Simulates the DBY e-signing platform confirming, via the Bonita REST API, that the prospect has signed the contract online and completed KYC. Only the e-signing service account can see this task."
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -101,7 +101,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "cfc92251-501a-4ea4-8c2a-24037232e72d",
+              "reference" : "0113fdbb-3af3-4b9c-a337-d66c66a270b2",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -117,7 +117,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "7e70d357-a5af-4538-bf84-dac1b6e009b6",
+        "reference" : "6e210a8b-260d-4793-8065-8fcac6da604a",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -126,10 +126,100 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "22ae8168-177d-429f-a50b-4fd5e181f8cd",
+          "reference" : "da923342-c8c7-4506-a71f-fc095a0eb4eb",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Contract signed online by the prospect"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "formInput.contractSigned"
+                  }
+                },
+                "reference" : "8133f77d-0ee8-48ae-95ab-5d95313f10e8",
+                "hasValidationError" : false,
+                "id" : "pbCheckbox",
+                "description" : ""
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "md" : 12,
+                  "sm" : 12,
+                  "xs" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "disabled" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "KYC completed online by the prospect"
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "formInput.kycVerified"
+                  }
+                },
+                "reference" : "d7b9dfae-642a-42b6-aed0-8274488c445d",
+                "hasValidationError" : false,
+                "id" : "pbCheckbox",
+                "description" : ""
+              }
+            ],
             [
               {
                 "type" : "component",
@@ -157,7 +247,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Confirm signature and KYC received"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -194,7 +284,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid"
+                    "value" : "$form.$invalid || !formInput.contractSigned || !formInput.kycVerified"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -203,30 +293,9 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "assign" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "url" : {
-                    "type" : "interpolation"
-                  },
-                  "responseStatusCode" : {
-                    "type" : "variable"
-                  },
-                  "dataFromSuccess" : {
-                    "type" : "variable"
-                  },
-                  "closeOnSuccess" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "modalId" : {
-                    "type" : "constant",
-                    "value" : ""
                   }
                 },
-                "reference" : "fe502e64-dcf4-4512-9f97-1c53e400294e",
+                "reference" : "2e1a37a6-bedf-41bb-90c0-1b1a03237852",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -267,7 +336,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "<strong>Debug message</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
+                    "value" : "<strong>The callback could not be submitted</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -278,7 +347,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "33f33b72-5e2e-4e46-a9d9-d196c45ae033",
+                "reference" : "a9a735a3-c0d4-4a3b-ba9d-09282f3c361a",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -294,6 +363,16 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"contractSigned\" : false,\r",
+        "  \"kycVerified\" : false\r",
+        "}"
       ],
       "exposed" : false
     },
@@ -316,7 +395,8 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "",
+        "\tcontractSigned: $data.formInput.contractSigned,",
+        "\tkycVerified: $data.formInput.kycVerified",
         "}"
       ],
       "exposed" : false
@@ -338,14 +418,14 @@
   },
   "assets" : [
     {
-      "id" : "9dedf89a-2618-4d88-90e9-d5e4cd12dbae",
+      "id" : "7ddea5ec-d821-4016-8010-a865e4754bab",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "91d02c5e-6558-44c4-be54-23d0a15030ad",
+      "id" : "79b538a0-3fce-4180-970d-e914781ed3a6",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
