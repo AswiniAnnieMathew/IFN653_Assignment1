@@ -417,11 +417,11 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Business unit"
+                          "value" : "Department"
                         },
                         "placeholder" : {
                           "type" : "interpolation",
-                          "value" : "e.g. Retail Banking"
+                          "value" : "e.g. Lending Operations"
                         },
                         "type" : {
                           "type" : "constant",
@@ -433,7 +433,7 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.prospectInput.businessUnit"
+                          "value" : "formInput.prospectInput.department"
                         },
                         "required" : {
                           "type" : "constant",
@@ -673,13 +673,15 @@
     "formInput" : {
       "type" : "json",
       "value" : [
-        "{\r",
-        "  \"prospectInput\" : {\r",
-        "    \"prospectName\" : \"\",\r",
-        "    \"hiringManagerName\" : \"\",\r",
-        "    \"businessUnit\" : \"\",\r",
-        "    \"employingEntity\" : \"\"\r",
-        "  }\r",
+        "{",
+        "  \"prospectInput\" : {",
+        "    \"prospectName\" : \"\",",
+        "    \"hiringManagerName\" : \"\",",
+        "    \"department\" : \"\",",
+        "    \"offeredSalary\" : null,",
+        "    \"employmentType\" : \"\",",
+        "    \"employingEntity\" : \"\"",
+        "  }",
         "}"
       ],
       "exposed" : false

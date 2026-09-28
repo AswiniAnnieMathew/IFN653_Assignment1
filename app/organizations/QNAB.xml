@@ -84,7 +84,7 @@
       <firstName>Virginie</firstName>
       <lastName>Jomphe</lastName>
       <title>Mrs</title>
-      <jobTitle>Payroll Officer</jobTitle>
+      <jobTitle>Finance Officer (Payroll)</jobTitle>
       <manager>zachary.williamson</manager>
       <personalData/>
       <professionalData>
@@ -110,7 +110,7 @@
       <firstName>Thorsten</firstName>
       <lastName>Hartmann</lastName>
       <title>Mr</title>
-      <jobTitle>Payroll Officer</jobTitle>
+      <jobTitle>Finance Officer (Payroll)</jobTitle>
       <manager>zachary.williamson</manager>
       <personalData/>
       <professionalData>
@@ -318,7 +318,7 @@
       <firstName>Thomas</firstName>
       <lastName>Wallis</lastName>
       <title>Mr</title>
-      <jobTitle>Payroll Officer</jobTitle>
+      <jobTitle>Finance Officer (Payroll)</jobTitle>
       <manager>michael.morrison</manager>
       <personalData/>
       <professionalData>
@@ -444,19 +444,18 @@
       <enabled>true</enabled>
       <password encrypted="false">bpm</password>
     </user>
-    <user userName="Aswini Mathew">
-      <firstName>Aswini</firstName>
-      <lastName>Mathew</lastName>
-      <jobTitle>Admin</jobTitle>
+    <user userName="esign.service">
+      <firstName>DBY e-signing</firstName>
+      <lastName>Platform</lastName>
+      <jobTitle>Service account</jobTitle>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
-    <user userName="esign.service">
-      <firstName>DBY e-signing</firstName>
-      <lastName>Platform</lastName>
-      <jobTitle>Service account</jobTitle>
+    <user userName="Aswini Mathew">
+      <firstName>Aswini</firstName>
+      <lastName>Mathew</lastName>
       <personalData/>
       <professionalData/>
       <password encrypted="false">bpm</password>
@@ -479,8 +478,9 @@
     <role name="Compliance Manager">
       <displayName>Compliance Manager</displayName>
     </role>
-    <role name="Payroll Officer">
-      <displayName>Payroll Officer</displayName>
+    <role name="Finance Officer">
+      <displayName>Finance Officer</displayName>
+      <description>Finance Department officer who sets up employee payroll profiles</description>
     </role>
     <role name="IT Service Manager">
       <displayName>IT Service Manager</displayName>
@@ -519,9 +519,9 @@
     <group name="HR" parentPath="/qnab/People &amp; Services">
       <displayName>HR</displayName>
     </group>
-    <group name="Payroll" parentPath="/qnab/People &amp; Services">
-      <displayName>Payroll</displayName>
-      <description>Payroll Team</description>
+    <group name="Finance" parentPath="/qnab">
+      <displayName>Finance</displayName>
+      <description>This group represents the Finance Department of the QNAB organization, responsible for employee payroll profiles</description>
     </group>
     <group name="Banking Operations" parentPath="/qnab">
       <displayName>Banking Operations</displayName>
@@ -558,15 +558,15 @@
     </membership>
     <membership>
       <userName>virginie.jomphe</userName>
-      <roleName>Payroll Officer</roleName>
-      <groupName>Payroll</groupName>
-      <groupParentPath>/qnab/People &amp; Services</groupParentPath>
+      <roleName>Finance Officer</roleName>
+      <groupName>Finance</groupName>
+      <groupParentPath>/qnab</groupParentPath>
     </membership>
     <membership>
       <userName>thorsten.hartmann</userName>
-      <roleName>Payroll Officer</roleName>
-      <groupName>Payroll</groupName>
-      <groupParentPath>/qnab/People &amp; Services</groupParentPath>
+      <roleName>Finance Officer</roleName>
+      <groupName>Finance</groupName>
+      <groupParentPath>/qnab</groupParentPath>
     </membership>
     <membership>
       <userName>jan.fisher</userName>
@@ -612,9 +612,9 @@
     </membership>
     <membership>
       <userName>thomas.wallis</userName>
-      <roleName>Payroll Officer</roleName>
-      <groupName>Payroll</groupName>
-      <groupParentPath>/qnab/People &amp; Services</groupParentPath>
+      <roleName>Finance Officer</roleName>
+      <groupName>Finance</groupName>
+      <groupParentPath>/qnab</groupParentPath>
     </membership>
     <membership>
       <userName>daniela.angelo</userName>
@@ -641,15 +641,15 @@
       <groupParentPath>/qnab</groupParentPath>
     </membership>
     <membership>
-      <userName>Aswini Mathew</userName>
-      <roleName>Admin</roleName>
-      <groupName>IT Infra</groupName>
-      <groupParentPath>/qnab/Technology &amp; Data</groupParentPath>
-    </membership>
-    <membership>
       <userName>esign.service</userName>
       <roleName>E-signing Service</roleName>
       <groupName>Digital</groupName>
+      <groupParentPath>/qnab/Technology &amp; Data</groupParentPath>
+    </membership>
+    <membership>
+      <userName>Aswini Mathew</userName>
+      <roleName>Admin</roleName>
+      <groupName>IT Infra</groupName>
       <groupParentPath>/qnab/Technology &amp; Data</groupParentPath>
     </membership>
   </memberships>

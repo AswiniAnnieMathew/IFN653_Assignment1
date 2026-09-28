@@ -462,7 +462,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Business unit"
+                    "value" : "Department"
                   },
                   "labelPosition" : {
                     "type" : "constant",
@@ -477,7 +477,7 @@
                   },
                   "value" : {
                     "type" : "variable",
-                    "value" : "prospect.businessUnit"
+                    "value" : "prospect.department"
                   },
                   "debounce" : {
                     "type" : "constant",

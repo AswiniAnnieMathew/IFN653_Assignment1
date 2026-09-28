@@ -1,10 +1,10 @@
 {
-  "id" : "ProspectResponseForm",
-  "name" : "ProspectResponseForm",
+  "id" : "AssignStaffNumberForm",
+  "name" : "AssignStaffNumberForm",
   "type" : "form",
-  "uuid" : "6ab3c194-3c56-4f80-bc60-cc5b630c90e8",
+  "uuid" : "fc2a0012-ecbe-4883-8143-33dece7e99f2",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1790432214616,
+  "lastUpdate" : 1790591942166,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "1b2605c9-4bcc-429f-9489-4ea12c203a97",
+        "reference" : "a4b26d0a-803d-4bb6-90d6-89e8742fc734",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -53,7 +53,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "79c1d7c2-4658-4548-81fe-b6c91d3685bb",
+              "reference" : "31171027-7afd-47a9-9f69-4bb905c5b718",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -101,7 +101,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "36e6077a-640e-4a91-9b89-fd384b416387",
+              "reference" : "ca8366f3-7e37-46d7-accf-3989594ea514",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -117,7 +117,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "037e07b4-a892-48a4-a4f7-e61695b04ebb",
+        "reference" : "bfaf2f67-0fcd-4b54-a6c2-c337663f907b",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -126,7 +126,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "8f25050d-da4c-43df-8896-a482adf1a56f",
+          "reference" : "9ac6dfb3-82c4-48d3-87aa-65b562e44634",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -154,7 +154,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Offer details"
+                    "value" : "New employee"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -165,7 +165,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "0f2e6f0d-81f1-4d1c-9bbc-97df61a385f6",
+                "reference" : "049f51ea-257e-4ba3-a41c-ea3b7154a021",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -197,7 +197,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "491073f2-51ff-4a3f-b4f2-051c44a3c95c",
+                "reference" : "dfbc46a8-716e-4d83-add1-0fa692654f13",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -211,380 +211,120 @@
                         "lg" : 6
                       },
                       "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
                         "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
                         "hidden" : {
-                          "type" : "expression",
-                          "value" : "!prospect.prospectName"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Prospect"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{prospect.prospectName}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 6
-                        }
-                      },
-                      "reference" : "80742a20-a7bb-43c1-b22a-4971efcc127e",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
-                    },
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 6,
-                        "lg" : 6
-                      },
-                      "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
                           "type" : "constant",
                           "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!prospect.hiringManagerName"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Hiring manager"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{prospect.hiringManagerName}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 6
-                        }
-                      },
-                      "reference" : "7913a508-d1a7-4542-a393-1b5ebd83145d",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 6,
-                        "lg" : 6
-                      },
-                      "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!prospect.department"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Department"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{prospect.department}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 6
-                        }
-                      },
-                      "reference" : "cb14b6eb-bda1-42aa-abf6-9d38078247ad",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
-                    },
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 6,
-                        "lg" : 6
-                      },
-                      "propertyValues" : {
-                        "allowHtml" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!prospect.employingEntity"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Employing entity"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{prospect.employingEntity}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 6
-                        }
-                      },
-                      "reference" : "010e0342-5fba-4bfb-8033-173e6fb06b56",
-                      "hasValidationError" : false,
-                      "id" : "pbText",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "disabled" : {
-                          "type" : "expression",
-                          "value" : "false"
-                        },
-                        "required" : {
-                          "type" : "expression",
-                          "value" : "true"
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Prospect's response"
                         },
                         "labelPosition" : {
                           "type" : "constant",
                           "value" : "top"
                         },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
                         "labelWidth" : {
                           "type" : "constant",
-                          "value" : 4
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Employee name (from the prospect record)"
+                        },
+                        "placeholder" : {
+                          "type" : "constant"
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 6
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "prospect.prospectName"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        }
+                      },
+                      "reference" : "7f85dcbd-282e-4deb-ae28-eb7446dd3b33",
+                      "hasValidationError" : false,
+                      "id" : "pbInput",
+                      "description" : ""
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Staff number"
                         },
                         "placeholder" : {
                           "type" : "interpolation",
-                          "value" : "Select the response"
+                          "value" : "e.g. QN-000123"
                         },
-                        "availableValues" : {
-                          "type" : "expression",
-                          "value" : "[\"Accepted\", \"Declined\", \"Negotiate\"]"
-                        },
-                        "displayedKey" : {
-                          "type" : "expression",
-                          "value" : ""
-                        },
-                        "returnedKey" : {
-                          "type" : "expression",
-                          "value" : ""
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "response.offerResponse"
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "text"
                         },
                         "dimension" : {
                           "type" : "constant",
-                          "value" : 12
-                        }
-                      },
-                      "reference" : "1bd2520c-e1f2-4ffd-b1a2-576ddb255a79",
-                      "hasValidationError" : false,
-                      "id" : "pbSelect",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
+                          "value" : 6
                         },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "readOnly" : {
-                          "type" : "expression",
-                          "value" : "false"
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.employeeInput.staffNumber"
                         },
                         "required" : {
-                          "type" : "expression",
-                          "value" : "response.offerResponse === 'Negotiate'"
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "minLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "maxLength" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Negotiation notes (required when negotiating)"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "response.negotiationNotes"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        }
-                      },
-                      "reference" : "e30dc634-67a7-4ee6-b1b9-c3d4737b2442",
-                      "hasValidationError" : false,
-                      "id" : "pbTextarea",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "allowHtml" : {
                           "type" : "constant",
                           "value" : true
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!prospect.revisedOfferDetails"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Revised offer details"
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{prospect.revisedOfferDetails}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
                         }
                       },
-                      "reference" : "500cbfd8-151a-4247-b651-17d3ba4260be",
+                      "reference" : "393ddc74-8c63-44d9-ac24-7574acb3b07a",
                       "hasValidationError" : false,
-                      "id" : "pbText",
+                      "id" : "pbInput",
                       "description" : ""
                     }
                   ]
@@ -618,7 +358,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Record response"
+                    "value" : "Assign staff number"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -666,7 +406,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "ab49751e-02e1-4223-87b3-1abe059bf431",
+                "reference" : "e967e083-2cbb-423d-8828-163d2e8cdd1d",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -707,7 +447,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "<strong>The response could not be recorded</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
+                    "value" : "<strong>The staff number could not be saved</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -718,7 +458,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "a81a9449-9726-415b-9c34-65a7e0805330",
+                "reference" : "786843cf-b502-477f-900d-37b006ee1451",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -730,17 +470,22 @@
     ]
   ],
   "variables" : {
-    "prospect" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.prospect_ref.link}}"
-      ],
-      "exposed" : false
-    },
     "task" : {
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
+      ],
+      "exposed" : false
+    },
+    "formInput" : {
+      "type" : "json",
+      "value" : [
+        "{\r",
+        "  \"employeeInput\" : {\r",
+        "    \"employeeName\" : \"\",\r",
+        "    \"staffNumber\" : \"\"\r",
+        "  }\r",
+        "}"
       ],
       "exposed" : false
     },
@@ -763,9 +508,9 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tprospectInput: {",
-        "\t\tofferResponse: $data.response.offerResponse,",
-        "\t\tnegotiationNotes: $data.response.negotiationNotes",
+        "\temployeeInput: {",
+        "\t\temployeeName: $data.prospect ? $data.prospect.prospectName : null,",
+        "\t\tstaffNumber: $data.formInput.employeeInput.staffNumber",
         "\t}",
         "}"
       ],
@@ -785,29 +530,26 @@
       ],
       "exposed" : false
     },
-    "response" : {
-      "type" : "json",
+    "prospect" : {
+      "type" : "url",
       "value" : [
-        "{",
-        "  \"offerResponse\" : null,",
-        "  \"negotiationNotes\" : null",
-        "}"
+        "../{{context.prospect_ref.link}}"
       ],
       "exposed" : false
     }
   },
   "assets" : [
     {
-      "id" : "deee691c-fa78-4142-81bf-0f14c82142e7",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "ed856a06-b896-4cb0-8d4c-fc190e757c01",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "8abe1349-8cb5-4bdd-82d5-3e0893afcd41",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "37dd54ab-e2b7-4988-b474-b96822506fc1",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }
