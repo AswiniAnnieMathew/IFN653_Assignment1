@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "e686ff1b-5f19-4b96-8266-5f027a170892",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1790482122405,
+  "lastUpdate" : 1790771767342,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -90,7 +90,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
+                  "value" : "<div style=\"background:#eef3fb;border-left:4px solid #1f3864;padding:6px 10px;margin-bottom:8px\">&#128100; <strong>Signed in as {{signedInAs}}</strong></div>{{ task.displayDescription }}"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -224,6 +224,96 @@
               {
                 "type" : "component",
                 "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "minLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "maxLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Compliance system KYC reference"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "placeholder" : {
+                    "type" : "interpolation",
+                    "value" : "Reference from the compliance system, e.g. KYC-2026-0042"
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "formInput.kycReference"
+                  },
+                  "debounce" : {
+                    "type" : "constant",
+                    "value" : 0
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "text"
+                  },
+                  "min" : {
+                    "type" : "constant"
+                  },
+                  "max" : {
+                    "type" : "constant"
+                  },
+                  "step" : {
+                    "type" : "constant",
+                    "value" : 1
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 12
+                  }
+                },
+                "reference" : "34d8eaa8-05f3-48c7-b828-a76d10657ef3",
+                "hasValidationError" : false,
+                "id" : "pbInput"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
                   "md" : 12,
                   "sm" : 12,
                   "xs" : 12,
@@ -284,7 +374,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid || !formInput.contractSigned || !formInput.kycVerified"
+                    "value" : "$form.$invalid || !formInput.contractSigned || !formInput.kycVerified || !formInput.kycReference"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -369,9 +459,10 @@
     "formInput" : {
       "type" : "json",
       "value" : [
-        "{\r",
-        "  \"contractSigned\" : false,\r",
-        "  \"kycVerified\" : false\r",
+        "{",
+        "  \"contractSigned\" : false,",
+        "  \"kycVerified\" : false,",
+        "  \"kycReference\" : \"\"",
         "}"
       ],
       "exposed" : false
@@ -396,8 +487,11 @@
       "value" : [
         "return {",
         "\tcontractSigned: $data.formInput.contractSigned,",
-        "\tkycVerified: $data.formInput.kycVerified",
-        "}"
+        "\tkycVerified: $data.formInput.kycVerified,",
+        "\tprospectInput: {",
+        "\t\tkycReference: $data.formInput.kycReference",
+        "\t}",
+        "};"
       ],
       "exposed" : false
     },
@@ -412,6 +506,42 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "userSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/unusedId"
+      ],
+      "exposed" : false
+    },
+    "userInfo" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user/{{userSession.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "userMemberships" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/membership?p=0&c=10&f=user_id={{userSession.user_id}}&d=role_id&d=group_id"
+      ],
+      "exposed" : false
+    },
+    "signedInAs" : {
+      "type" : "expression",
+      "value" : [
+        "// name of the logged-in user, plus their QNAB role(s) and department",
+        "if (!$data.userInfo) { return \"\"; }",
+        "var who = ($data.userInfo.firstname + \" \" + $data.userInfo.lastname).trim();",
+        "var roles = ($data.userMemberships || []).map(function (m) {",
+        "\tvar role = m.role_id && m.role_id.displayName ? m.role_id.displayName : \"\";",
+        "\tvar dept = m.group_id && m.group_id.displayName ? \" (\" + m.group_id.displayName + \")\" : \"\";",
+        "\treturn role + dept;",
+        "}).filter(function (r) { return r; });",
+        "return roles.length ? who + \", \" + roles.join(\"; \") : who;"
       ],
       "exposed" : false
     }

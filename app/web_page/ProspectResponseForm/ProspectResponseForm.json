@@ -90,7 +90,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
+                  "value" : "<div style=\"background:#eef3fb;border-left:4px solid #1f3864;padding:6px 10px;margin-bottom:8px\">&#128100; <strong>Signed in as {{signedInAs}}</strong></div>{{ task.displayDescription }}"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -748,6 +748,42 @@
         "  \"offerResponse\" : null,",
         "  \"negotiationNotes\" : null",
         "}"
+      ],
+      "exposed" : false
+    },
+    "userSession" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/unusedId"
+      ],
+      "exposed" : false
+    },
+    "userInfo" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/user/{{userSession.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "userMemberships" : {
+      "type" : "url",
+      "value" : [
+        "../API/identity/membership?p=0&c=10&f=user_id={{userSession.user_id}}&d=role_id&d=group_id"
+      ],
+      "exposed" : false
+    },
+    "signedInAs" : {
+      "type" : "expression",
+      "value" : [
+        "// name of the logged-in user, plus their QNAB role(s) and department",
+        "if (!$data.userInfo) { return \"\"; }",
+        "var who = ($data.userInfo.firstname + \" \" + $data.userInfo.lastname).trim();",
+        "var roles = ($data.userMemberships || []).map(function (m) {",
+        "\tvar role = m.role_id && m.role_id.displayName ? m.role_id.displayName : \"\";",
+        "\tvar dept = m.group_id && m.group_id.displayName ? \" (\" + m.group_id.displayName + \")\" : \"\";",
+        "\treturn role + dept;",
+        "}).filter(function (r) { return r; });",
+        "return roles.length ? who + \", \" + roles.join(\"; \") : who;"
       ],
       "exposed" : false
     }
