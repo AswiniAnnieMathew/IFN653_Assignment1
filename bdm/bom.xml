@@ -22,7 +22,8 @@
                 <field type="STRING" length="255" name="employingEntity" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="offerResponse" nullable="true" collection="false"/>
                 <field type="TEXT" length="255" name="negotiationNotes" nullable="true" collection="false"/>
-                <field type="TEXT" length="255" name="revisedOfferDetails" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="kycReference" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="startDate" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

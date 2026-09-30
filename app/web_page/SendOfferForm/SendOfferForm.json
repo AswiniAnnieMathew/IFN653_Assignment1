@@ -1,10 +1,10 @@
 {
-  "id" : "NotifyHiringManager",
-  "name" : "NotifyHiringManager",
+  "id" : "SendOfferForm",
+  "name" : "SendOfferForm",
   "type" : "form",
-  "uuid" : "18e05dfb-739e-4ce4-a1ce-460e9ea7a46c",
+  "uuid" : "c4799701-a8ad-46e5-b94e-42914cfcbd2a",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1790433818059,
+  "lastUpdate" : 1790683464457,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -13,20 +13,8 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "repeatedCollection" : {
-            "type" : "variable"
-          }
-        },
-        "reference" : "add8e931-dcdc-4d60-b1bc-8fd8600c2a8d",
+        "propertyValues" : { },
+        "reference" : "6be2a7a4-74de-4864-82df-a7960f10ed2c",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -65,7 +53,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "509140e1-97fa-471a-824a-db1e8ec5e91f",
+              "reference" : "8bf31ddf-ec8b-4d87-a51c-9225ab4651ba",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -113,7 +101,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "e6303161-1197-47fd-a47d-0cf1ad408678",
+              "reference" : "076c26b8-babf-4940-9df8-0693b1f11c36",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -126,21 +114,10 @@
       {
         "type" : "formContainer",
         "dimension" : {
-          "xs" : 12,
-          "md" : 12,
-          "lg" : 12
+          "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          }
-        },
-        "reference" : "2befa2c9-7ed7-45e5-8e0e-bb51ac6a012b",
+        "propertyValues" : { },
+        "reference" : "96ac2394-821b-477c-964b-685ff361ae07",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -149,7 +126,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "2cd0a796-d6ea-42b9-8320-56910e33a1c3",
+          "reference" : "c4717f83-1893-4a81-87ba-905508e76542",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -159,97 +136,8 @@
                 "dimension" : {
                   "xs" : 12,
                   "sm" : 12,
-                  "md" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "minLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "maxLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "readOnly" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Reason for cancellation"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "placeholder" : {
-                    "type" : "interpolation"
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "cancelReason"
-                  },
-                  "debounce" : {
-                    "type" : "constant",
-                    "value" : 0
-                  },
-                  "type" : {
-                    "type" : "constant",
-                    "value" : "text"
-                  },
-                  "min" : {
-                    "type" : "constant"
-                  },
-                  "max" : {
-                    "type" : "constant"
-                  },
-                  "step" : {
-                    "type" : "constant",
-                    "value" : 1
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "c360d52d-5975-48e9-8b56-8117c17c6610",
-                "hasValidationError" : false,
-                "id" : "pbInput"
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 6,
-                  "lg" : 6
+                  "md" : 4,
+                  "lg" : 4
                 },
                 "propertyValues" : {
                   "cssClasses" : {
@@ -323,10 +211,10 @@
                   },
                   "dimension" : {
                     "type" : "constant",
-                    "value" : 6
+                    "value" : 4
                   }
                 },
-                "reference" : "cdb0924a-7505-4ad9-a1ce-57381119ac01",
+                "reference" : "5af5f1a3-1abf-4d0c-bae2-7bb4e6066eb5",
                 "hasValidationError" : false,
                 "id" : "pbInput"
               },
@@ -335,97 +223,8 @@
                 "dimension" : {
                   "xs" : 12,
                   "sm" : 12,
-                  "md" : 6,
-                  "lg" : 6
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "minLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "maxLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "readOnly" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Hiring manager"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "placeholder" : {
-                    "type" : "interpolation"
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "prospect.hiringManagerName"
-                  },
-                  "debounce" : {
-                    "type" : "constant",
-                    "value" : 0
-                  },
-                  "type" : {
-                    "type" : "constant",
-                    "value" : "text"
-                  },
-                  "min" : {
-                    "type" : "constant"
-                  },
-                  "max" : {
-                    "type" : "constant"
-                  },
-                  "step" : {
-                    "type" : "constant",
-                    "value" : 1
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 6
-                  }
-                },
-                "reference" : "db8e8a7c-0794-4325-9958-2383970cd4c6",
-                "hasValidationError" : false,
-                "id" : "pbInput"
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 6,
-                  "lg" : 6
+                  "md" : 4,
+                  "lg" : 4
                 },
                 "propertyValues" : {
                   "cssClasses" : {
@@ -499,10 +298,273 @@
                   },
                   "dimension" : {
                     "type" : "constant",
+                    "value" : 4
+                  }
+                },
+                "reference" : "9012a48e-ae3a-401b-839b-100c1ddac464",
+                "hasValidationError" : false,
+                "id" : "pbInput"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 4,
+                  "lg" : 4
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "minLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "maxLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Employing entity"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "placeholder" : {
+                    "type" : "interpolation"
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "prospect.employingEntity"
+                  },
+                  "debounce" : {
+                    "type" : "constant",
+                    "value" : 0
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "text"
+                  },
+                  "min" : {
+                    "type" : "constant"
+                  },
+                  "max" : {
+                    "type" : "constant"
+                  },
+                  "step" : {
+                    "type" : "constant",
+                    "value" : 1
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 4
+                  }
+                },
+                "reference" : "5cca3b47-9eba-46bb-88a6-2e17b530a37c",
+                "hasValidationError" : false,
+                "id" : "pbInput"
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 6,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "minLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "maxLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Offered annual salary"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "placeholder" : {
+                    "type" : "interpolation"
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "prospect.offeredSalary"
+                  },
+                  "debounce" : {
+                    "type" : "constant",
+                    "value" : 0
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "text"
+                  },
+                  "min" : {
+                    "type" : "constant"
+                  },
+                  "max" : {
+                    "type" : "constant"
+                  },
+                  "step" : {
+                    "type" : "constant",
+                    "value" : 1
+                  },
+                  "dimension" : {
+                    "type" : "constant",
                     "value" : 6
                   }
                 },
-                "reference" : "fb42b21e-e9ef-4616-9755-3289ba83ebb9",
+                "reference" : "7d212bb1-7a2e-408a-9981-2ad33c8963ea",
+                "hasValidationError" : false,
+                "id" : "pbInput"
+              },
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 6,
+                  "lg" : 6
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "required" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "minLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "maxLength" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "readOnly" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Employment type"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "placeholder" : {
+                    "type" : "interpolation"
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "prospect.employmentType"
+                  },
+                  "debounce" : {
+                    "type" : "constant",
+                    "value" : 0
+                  },
+                  "type" : {
+                    "type" : "constant",
+                    "value" : "text"
+                  },
+                  "min" : {
+                    "type" : "constant"
+                  },
+                  "max" : {
+                    "type" : "constant"
+                  },
+                  "step" : {
+                    "type" : "constant",
+                    "value" : 1
+                  },
+                  "dimension" : {
+                    "type" : "constant",
+                    "value" : 6
+                  }
+                },
+                "reference" : "1e5783c5-b27b-4450-8a17-9f894a7e2581",
                 "hasValidationError" : false,
                 "id" : "pbInput"
               }
@@ -570,7 +632,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "198c273d-adcd-40ff-bb6d-7dcc850eb644",
+                "reference" : "3eaf23cf-2097-4d85-9eaf-8c8aca8699da",
                 "hasValidationError" : false,
                 "id" : "pbTextarea"
               }
@@ -602,7 +664,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Hiring manager notified"
+                    "value" : "Offer sent"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -671,7 +733,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "42a12348-150a-43f7-bb62-7bab5ba83f52",
+                "reference" : "ed0c6b0f-81d1-47b6-9fcb-2520579b2e1f",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -721,9 +783,17 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
                   }
                 },
-                "reference" : "e68185ba-6d14-4e99-b998-104f5eb037b4",
+                "reference" : "70685e92-63d1-407a-906d-e69a179159eb",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -786,33 +856,20 @@
         "../{{context.prospect_ref.link}}"
       ],
       "exposed" : false
-    },
-    "cancelReason" : {
-      "type" : "expression",
-      "value" : [
-        "if (!$data.prospect) { return \"\"; }",
-        "if ($data.prospect.offerResponse === \"Declined\") { return \"Offer declined by the prospect\"; }",
-        "if ($data.prospect.offerResponse === \"Accepted\") {",
-        "\tif ($data.prospect.employingEntity === \"DBY\") { return \"DBY online signing link expired: contract not signed and KYC not completed within 7 days\"; }",
-        "\treturn \"APE physical contract deadline passed: signed contract and KYC not received within 7 days\";",
-        "}",
-        "return \"Offer expired without a response\";"
-      ],
-      "exposed" : false
     }
   },
   "assets" : [
     {
-      "id" : "e00413ff-d920-4699-871d-34a02b59372e",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "c5ec859d-d958-4717-a2c5-aeb5cc21c600",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "39d516c8-8117-4cdb-8aa4-967cb582751a",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "f49e8127-3376-4db1-b08b-f7f80e3d3680",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }

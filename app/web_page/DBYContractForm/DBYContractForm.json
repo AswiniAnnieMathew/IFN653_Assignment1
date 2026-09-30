@@ -132,185 +132,6 @@
           "rows" : [
             [
               {
-                "type" : "container",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "repeatedCollection" : {
-                    "type" : "variable"
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "374e0864-5f9b-4b5a-a956-928507e369d8",
-                "hasValidationError" : false,
-                "id" : "pbContainer",
-                "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "level" : {
-                          "type" : "constant",
-                          "value" : "Level 4"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "Employment contract (sent to the DBY e-signing platform)"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "left"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        }
-                      },
-                      "reference" : "3f20f5c6-1969-4e8f-851a-c15d1c2137eb",
-                      "hasValidationError" : false,
-                      "id" : "pbTitle",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "showPreview" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "document" : {
-                          "type" : "variable",
-                          "value" : "context.employmentContract_ref"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "Process document"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "url" : {
-                          "type" : "constant"
-                        }
-                      },
-                      "reference" : "3b6ecd84-44a9-47ba-93f8-bf1e52bd6036",
-                      "hasValidationError" : false,
-                      "id" : "pbFileViewer",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Employment Contract"
-                        },
-                        "placeholder" : {
-                          "type" : "constant",
-                          "value" : "Browse to select the contract file..."
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "context.employmentContract_ref.newValue"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "url" : {
-                          "type" : "constant",
-                          "value" : "../API/formFileUpload"
-                        }
-                      },
-                      "reference" : "f0b614d2-0bec-4d44-b136-518858d72c69",
-                      "hasValidationError" : false,
-                      "id" : "pbUpload",
-                      "description" : ""
-                    }
-                  ]
-                ]
-              }
-            ],
-            [
-              {
                 "type" : "component",
                 "dimension" : {
                   "md" : 12,
@@ -333,7 +154,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Agreed offer details"
+                    "value" : "Prospect info"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -642,105 +463,60 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!prospect.negotiationNotes"
                         },
                         "readOnly" : {
                           "type" : "constant",
                           "value" : true
                         },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Negotiation notes (prospect's requests)"
+                          "value" : "Negotiation log"
                         },
-                        "dimension" : {
+                        "labelPosition" : {
                           "type" : "constant",
-                          "value" : 12
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
                         },
                         "value" : {
                           "type" : "variable",
                           "value" : "prospect.negotiationNotes"
                         },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        }
-                      },
-                      "reference" : "54b96f4d-6727-4470-b4c5-a86c13dbb893",
-                      "hasValidationError" : false,
-                      "id" : "pbTextarea",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Revised offer details (agreed terms)"
-                        },
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "prospect.revisedOfferDetails"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
                         }
                       },
-                      "reference" : "dbc457dc-581d-45a7-aa67-396114618080",
+                      "reference" : "54b96f4d-6727-4470-b4c5-a86c13dbb893",
                       "hasValidationError" : false,
                       "id" : "pbTextarea",
                       "description" : ""
@@ -776,7 +552,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Contract sent to e-signing platform"
+                    "value" : "Contract drafted and sent via e-signing"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -920,16 +696,7 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.context ){",
-        "\treturn {",
-        "\t\temploymentContractDocumentInput: {",
-        "\t\t\tid: $data.context.employmentContract_ref && $data.context.employmentContract_ref.id ? $data.context.employmentContract_ref.id.toString() : null,",
-        "\t\t\tfilename: $data.context.employmentContract_ref.newValue && $data.context.employmentContract_ref.newValue.filename ? $data.context.employmentContract_ref.newValue.filename : null,",
-        "\t\t\ttempPath: $data.context.employmentContract_ref.newValue && $data.context.employmentContract_ref.newValue.tempPath ? $data.context.employmentContract_ref.newValue.tempPath : null,",
-        "\t\t\tcontentType: $data.context.employmentContract_ref.newValue && $data.context.employmentContract_ref.newValue.contentType ? $data.context.employmentContract_ref.newValue.contentType : null",
-        "\t\t}",
-        "\t}",
-        "}"
+        "return {};"
       ],
       "exposed" : false
     },

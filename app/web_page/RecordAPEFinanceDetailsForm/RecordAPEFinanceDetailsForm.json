@@ -90,7 +90,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "APE employees email a PDF of their bank, tax and superannuation details. Enter them in the payroll system, then confirm below."
+                  "value" : "APE employees email a PDF form with their bank, tax and superannuation details. Set up their finance profile in the Finance system from it, then confirm below. The PDF is handled outside this workflow.<br/><strong>Start date: {{startDateText}}</strong> (complete before this date)"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -158,7 +158,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Finance details PDF received from the new hire and recorded in payroll"
+                    "value" : "Finance profile set up in the Finance system from the new employee's PDF form"
                   },
                   "dimension" : {
                     "type" : "constant",
@@ -202,7 +202,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Finance details recorded"
+                    "value" : "Finance profile set up"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -365,6 +365,22 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "prospect" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.prospect_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "startDateText" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.prospect || !$data.prospect.startDate) { return \"\"; }",
+        "var d = new Date($data.prospect.startDate + \"T00:00:00\");",
+        "return d.toLocaleDateString(\"en-AU\", { day: \"numeric\", month: \"short\", year: \"numeric\" });"
       ],
       "exposed" : false
     }

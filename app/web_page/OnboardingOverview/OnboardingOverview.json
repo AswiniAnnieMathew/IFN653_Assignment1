@@ -1,0 +1,1235 @@
+{
+  "id" : "OnboardingOverview",
+  "name" : "OnboardingOverview",
+  "type" : "form",
+  "uuid" : "2c248bc1-b70e-410e-905d-301aeccdcfa3",
+  "modelVersion" : "2.6",
+  "lastUpdate" : 1790758964696,
+  "description" : "Page generated with Bonita UI designer",
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12
+        },
+        "propertyValues" : { },
+        "reference" : "0f9adcae-8994-4bfb-8956-f2ae669124e6",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{statusTitle}}"
+                },
+                "level" : {
+                  "type" : "constant",
+                  "value" : "Level 2"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                }
+              },
+              "reference" : "b743af2d-749c-4ba0-9cb7-bae3a421f4c2",
+              "hasValidationError" : false,
+              "id" : "pbTitle"
+            }
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Default label"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "{{statusDetail}}{{loginKpi}}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "center"
+          }
+        },
+        "reference" : "8d0d9b63-0938-40a3-957a-c41db04fa077",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Prospect"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "-"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "prospect.prospectName"
+          },
+          "debounce" : {
+            "type" : "constant",
+            "value" : 0
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 6
+          }
+        },
+        "reference" : "213a6927-c9a5-4936-896d-44a1b9bacf55",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Hiring manager"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "-"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "prospect.hiringManagerName"
+          },
+          "debounce" : {
+            "type" : "constant",
+            "value" : 0
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 6
+          }
+        },
+        "reference" : "2b6266af-39e9-4e6f-ab54-1e72bd15777c",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Department"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "-"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "prospect.department"
+          },
+          "debounce" : {
+            "type" : "constant",
+            "value" : 0
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 6
+          }
+        },
+        "reference" : "a06c9cfa-e394-4a66-8e20-1e0ce4987bb0",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Employing entity"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "-"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "prospect.employingEntity"
+          },
+          "debounce" : {
+            "type" : "constant",
+            "value" : 0
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 6
+          }
+        },
+        "reference" : "d4c17871-c2e4-4309-b744-4971abfdea93",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Offered salary"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "-"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "salaryText"
+          },
+          "debounce" : {
+            "type" : "constant",
+            "value" : 0
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 6
+          }
+        },
+        "reference" : "6a92454d-9063-4b4d-931b-ded56fe7242d",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Employment type"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "-"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "prospect.employmentType"
+          },
+          "debounce" : {
+            "type" : "constant",
+            "value" : 0
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 6
+          }
+        },
+        "reference" : "66a34546-2ffc-498f-b5c0-9664a84e6909",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Staff KYC reference (HR system)"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "-"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "prospect.kycReference"
+          },
+          "debounce" : {
+            "type" : "constant",
+            "value" : 0
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 6
+          }
+        },
+        "reference" : "a652cd27-c582-48f2-bef6-f283ba44ed01",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Staff number (VAXWORKER)"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "-"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "employee.staffNumber"
+          },
+          "debounce" : {
+            "type" : "constant",
+            "value" : 0
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 6
+          }
+        },
+        "reference" : "cabd4e7d-c33c-479b-b0e8-f138ce4a1ea3",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Work email / login (Microsoft)"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "-"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "employee.workEmail"
+          },
+          "debounce" : {
+            "type" : "constant",
+            "value" : 0
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 6
+          }
+        },
+        "reference" : "ee860f82-f0c5-4215-beb4-1f3fe5b29b74",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      },
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 6,
+          "lg" : 6
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Login created on"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "placeholder" : {
+            "type" : "interpolation",
+            "value" : "-"
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "employee.loginCreatedDate"
+          },
+          "debounce" : {
+            "type" : "constant",
+            "value" : 0
+          },
+          "type" : {
+            "type" : "constant",
+            "value" : "text"
+          },
+          "min" : {
+            "type" : "constant"
+          },
+          "max" : {
+            "type" : "constant"
+          },
+          "step" : {
+            "type" : "constant",
+            "value" : 1
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 6
+          }
+        },
+        "reference" : "500ec59f-aa68-4f2f-9470-6e115116f321",
+        "hasValidationError" : false,
+        "id" : "pbInput"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "expression",
+            "value" : "!prospect.negotiationNotes"
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Negotiation log"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "prospect.negotiationNotes"
+          },
+          "dimension" : {
+            "type" : "constant",
+            "value" : 12
+          }
+        },
+        "reference" : "1e1c7d15-dffa-40f0-90d2-c299b9363cfc",
+        "hasValidationError" : false,
+        "id" : "pbTextarea"
+      }
+    ]
+  ],
+  "variables" : {
+    "caseId" : {
+      "type" : "urlparameter",
+      "value" : [
+        "id"
+      ],
+      "exposed" : false
+    },
+    "liveContext" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/case/{{caseId}}/context"
+      ],
+      "exposed" : false
+    },
+    "archivedCase" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/archivedCase?p=0&c=1&f=sourceObjectId={{caseId}}"
+      ],
+      "exposed" : false
+    },
+    "archivedCaseId" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.archivedCase && $data.archivedCase.length ? $data.archivedCase[0].id : null;"
+      ],
+      "exposed" : false
+    },
+    "archivedContext" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/archivedCase/{{archivedCaseId}}/context"
+      ],
+      "exposed" : false
+    },
+    "caseContext" : {
+      "type" : "expression",
+      "value" : [
+        "// running cases use the live context, finished cases the archived one",
+        "if ($data.liveContext && $data.liveContext.prospect_ref) { return $data.liveContext; }",
+        "if ($data.archivedContext && $data.archivedContext.prospect_ref) { return $data.archivedContext; }",
+        "return null;"
+      ],
+      "exposed" : false
+    },
+    "prospect" : {
+      "type" : "url",
+      "value" : [
+        "../{{caseContext.prospect_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "employee" : {
+      "type" : "url",
+      "value" : [
+        "../{{caseContext.employee_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "pendingTasks" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/humanTask?p=0&c=10&f=caseId={{caseId}}"
+      ],
+      "exposed" : false
+    },
+    "caseFinished" : {
+      "type" : "expression",
+      "value" : [
+        "return !!($data.archivedCase && $data.archivedCase.length);"
+      ],
+      "exposed" : false
+    },
+    "onboarded" : {
+      "type" : "expression",
+      "value" : [
+        "return $data.caseFinished && !!($data.employee && $data.employee.workEmail && $data.employee.loginCreatedDate);"
+      ],
+      "exposed" : false
+    },
+    "statusTitle" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.caseFinished) { return \"⏳ In progress\"; }",
+        "return $data.onboarded ? \"✅ Fully onboarded\" : \"❌ Hire cancelled\";"
+      ],
+      "exposed" : false
+    },
+    "statusDetail" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.caseFinished) {",
+        "\tvar waiting = ($data.pendingTasks || []).map(function (t) { return t.displayName; });",
+        "\treturn waiting.length ? \"Waiting for: \" + waiting.join(\", \") : \"Processing the next step...\";",
+        "}",
+        "if ($data.onboarded) {",
+        "\treturn \"Working login, working email and finance profile set up\" + ($data.prospect && $data.prospect.employingEntity === \"DBY\" ? \" (DBY finance profile set up automatically).\" : \" (APE finance profile set up by Finance).\");",
+        "}",
+        "var p = $data.prospect || {};",
+        "if (p.offerResponse === \"Declined\") { return \"Offer declined by the prospect.\"; }",
+        "if (p.offerResponse === \"Accepted\") {",
+        "\treturn p.employingEntity === \"DBY\" ? \"DBY online signing link expired: contract and Staff KYC not completed within 7 days.\" : \"APE paper contract and Staff KYC not returned within 7 days.\";",
+        "}",
+        "return \"Offer expired without a response within 7 days.\";"
+      ],
+      "exposed" : false
+    },
+    "salaryText" : {
+      "type" : "expression",
+      "value" : [
+        "var s = $data.prospect && $data.prospect.offeredSalary;",
+        "return (s || s === 0) ? \"$\" + Number(s).toLocaleString(\"en-AU\") + \" per year\" : \"\";"
+      ],
+      "exposed" : false
+    },
+    "startDateText" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.prospect || !$data.prospect.startDate) { return \"\"; }",
+        "var d = new Date($data.prospect.startDate + \"T00:00:00\");",
+        "return d.toLocaleDateString(\"en-AU\", { day: \"numeric\", month: \"short\", year: \"numeric\" });"
+      ],
+      "exposed" : false
+    },
+    "loginKpi" : {
+      "type" : "expression",
+      "value" : [
+        "// scenario KPI: time from contract start date to first staff login",
+        "if (!$data.prospect || !$data.prospect.startDate) { return \"\"; }",
+        "var start = new Date($data.prospect.startDate + \"T00:00:00\");",
+        "if (!$data.employee || !$data.employee.loginCreatedDate) { return \" Start date: \" + $data.startDateText + \".\"; }",
+        "var login = new Date($data.employee.loginCreatedDate + \"T00:00:00\");",
+        "var days = Math.round((start - login) / 86400000);",
+        "if (days > 0) { return \" Start date: \" + $data.startDateText + \". Login ready \" + days + \" day\" + (days === 1 ? \"\" : \"s\") + \" before the start date.\"; }",
+        "if (days === 0) { return \" Start date: \" + $data.startDateText + \". Login ready on the start date.\"; }",
+        "return \" Start date: \" + $data.startDateText + \". Login ready \" + (-days) + \" day\" + (days === -1 ? \"\" : \"s\") + \" after the start date.\";"
+      ],
+      "exposed" : false
+    }
+  },
+  "assets" : [
+    {
+      "id" : "49a88275-027e-465c-b3e8-01c7322c3ab1",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "1d209041-fece-42b7-a5cc-9ac1c8d5d6c3",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [ ],
+  "hasValidationError" : false
+}

@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "234b80fe-cb0d-4f91-89a9-700c4b918ecc",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1790482949904,
+  "lastUpdate" : 1790683310518,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -403,33 +403,53 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "allowHtml" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "readOnly" : {
                           "type" : "constant",
                           "value" : true
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
                         },
                         "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "!prospect.negotiationNotes"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Prospect's request (what they asked to change)"
+                          "value" : "Negotiation log so far"
                         },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{prospect.negotiationNotes}}"
-                        },
-                        "alignment" : {
+                        "labelPosition" : {
                           "type" : "constant",
-                          "value" : "left"
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "prospect.negotiationNotes"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -438,8 +458,170 @@
                       },
                       "reference" : "9b4a85d4-8d54-4cfd-8758-70fda3a2070f",
                       "hasValidationError" : false,
-                      "id" : "pbText",
+                      "id" : "pbTextarea",
                       "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Offered annual salary (edit if revised)"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "prospect.offeredSalary"
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "type" : {
+                          "type" : "constant",
+                          "value" : "number"
+                        },
+                        "min" : {
+                          "type" : "expression",
+                          "value" : "1"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 6
+                        }
+                      },
+                      "reference" : "f1da2390-517e-4780-b2b4-831226df2c79",
+                      "hasValidationError" : false,
+                      "id" : "pbInput"
+                    },
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 6,
+                        "lg" : 6
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "expression",
+                          "value" : "true"
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Employment type (edit if revised)"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "placeholder" : {
+                          "type" : "interpolation",
+                          "value" : "Select an option"
+                        },
+                        "availableValues" : {
+                          "type" : "expression",
+                          "value" : "[\"Full-time\", \"Part-time\", \"Fixed-term\", \"Casual\"]"
+                        },
+                        "displayedKey" : {
+                          "type" : "constant"
+                        },
+                        "returnedKey" : {
+                          "type" : "constant"
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "prospect.employmentType"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 6
+                        }
+                      },
+                      "reference" : "722facf5-eaa4-43a8-93a5-8e4060bce5e9",
+                      "hasValidationError" : false,
+                      "id" : "pbSelect"
                     }
                   ],
                   [
@@ -478,7 +660,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Revised offer terms (sent to HR to issue the new offer)"
+                          "value" : "Your revision: what changed and why (added to the log)"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -486,11 +668,23 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "prospect.revisedOfferDetails"
+                          "value" : "revision.text"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : true
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
                         }
                       },
                       "reference" : "b4f2b837-46aa-4b95-a9bd-19b9fd20dbcc",
@@ -673,13 +867,19 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.prospect ){",
+        "function appendToLog(log, entry) {",
+        "\tif (!entry || !entry.trim()) { return log || null; }",
+        "\tvar line = \"[Hiring manager] \" + entry.trim();",
+        "\treturn log ? log + \"\\n\" + line : line;",
+        "}",
+        "if ($data.prospect) {",
         "\treturn {",
-        "\t\t//map prospect variable to expected task contract input",
         "\t\tprospectInput: {",
-        "\t\t\trevisedOfferDetails: $data.prospect.revisedOfferDetails !== undefined ? $data.prospect.revisedOfferDetails : null",
+        "\t\t\tofferedSalary: $data.prospect.offeredSalary,",
+        "\t\t\temploymentType: $data.prospect.employmentType,",
+        "\t\t\tnegotiationNotes: appendToLog($data.prospect.negotiationNotes, $data.revision.text)",
         "\t\t}",
-        "\t}",
+        "\t};",
         "}"
       ],
       "exposed" : false
@@ -695,6 +895,15 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "revision" : {
+      "type" : "json",
+      "value" : [
+        "{",
+        "  \"text\" : null",
+        "}"
       ],
       "exposed" : false
     }

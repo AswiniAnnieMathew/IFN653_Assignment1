@@ -90,7 +90,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayDescription }}"
+                  "value" : "{{ task.displayDescription }}<br/><strong>Start date: {{startDateText}}</strong> (complete before this date)"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -534,6 +534,15 @@
       "type" : "url",
       "value" : [
         "../{{context.prospect_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "startDateText" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.prospect || !$data.prospect.startDate) { return \"\"; }",
+        "var d = new Date($data.prospect.startDate + \"T00:00:00\");",
+        "return d.toLocaleDateString(\"en-AU\", { day: \"numeric\", month: \"short\", year: \"numeric\" });"
       ],
       "exposed" : false
     }
