@@ -81,10 +81,6 @@
                 "lg" : 12
               },
               "propertyValues" : {
-                "allowHtml" : {
-                  "type" : "constant",
-                  "value" : true
-                },
                 "labelHidden" : {
                   "type" : "constant",
                   "value" : true
@@ -111,6 +107,10 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "e6303161-1197-47fd-a47d-0cf1ad408678",
@@ -824,14 +824,15 @@
     "signedInAs" : {
       "type" : "expression",
       "value" : [
-        "// name of the logged-in user, plus their QNAB role(s) and department",
+        "// name of the logged-in user, plus their QNAB role(s) and department (QNAB groups only)",
         "if (!$data.userInfo) { return \"\"; }",
         "var who = ($data.userInfo.firstname + \" \" + $data.userInfo.lastname).trim();",
-        "var roles = ($data.userMemberships || []).map(function (m) {",
+        "var roles = ($data.userMemberships || []).filter(function (m) {",
+        "\treturn m.group_id && m.group_id.path && m.group_id.path.indexOf(\"/qnab\") === 0;",
+        "}).map(function (m) {",
         "\tvar role = m.role_id && m.role_id.displayName ? m.role_id.displayName : \"\";",
-        "\tvar dept = m.group_id && m.group_id.displayName ? \" (\" + m.group_id.displayName + \")\" : \"\";",
-        "\treturn role + dept;",
-        "}).filter(function (r) { return r; });",
+        "\treturn role + \" (\" + m.group_id.displayName + \")\";",
+        "});",
         "return roles.length ? who + \", \" + roles.join(\"; \") : who;"
       ],
       "exposed" : false

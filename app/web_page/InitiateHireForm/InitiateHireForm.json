@@ -69,10 +69,6 @@
                 "lg" : 12
               },
               "propertyValues" : {
-                "allowHtml" : {
-                  "type" : "constant",
-                  "value" : true
-                },
                 "labelHidden" : {
                   "type" : "constant",
                   "value" : true
@@ -99,6 +95,10 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : true
                 }
               },
               "reference" : "820b3e3e-3141-425e-b421-eb19c12dc0fe",
@@ -983,9 +983,11 @@
     "managerGroup" : {
       "type" : "expression",
       "value" : [
-        "// the logged-in hiring manager's department (group), from their organisation membership",
-        "var m = ($data.memberships || [])[0];",
-        "return m && typeof m.group_id === \"object\" ? m.group_id : null;"
+        "// the logged-in hiring manager's QNAB department (ignores any non-QNAB memberships)",
+        "var m = ($data.memberships || []).filter(function (x) {",
+        "\treturn x.group_id && typeof x.group_id === \"object\" && x.group_id.path && x.group_id.path.indexOf(\"/qnab\") === 0;",
+        "})[0];",
+        "return m ? m.group_id : null;"
       ],
       "exposed" : false
     },
@@ -1020,14 +1022,15 @@
     "signedInAs" : {
       "type" : "expression",
       "value" : [
-        "// name of the logged-in user, plus their QNAB role(s) and department",
+        "// name of the logged-in user, plus their QNAB role(s) and department (QNAB groups only)",
         "if (!$data.userInfo) { return \"\"; }",
         "var who = ($data.userInfo.firstname + \" \" + $data.userInfo.lastname).trim();",
-        "var roles = ($data.userMemberships || []).map(function (m) {",
+        "var roles = ($data.userMemberships || []).filter(function (m) {",
+        "\treturn m.group_id && m.group_id.path && m.group_id.path.indexOf(\"/qnab\") === 0;",
+        "}).map(function (m) {",
         "\tvar role = m.role_id && m.role_id.displayName ? m.role_id.displayName : \"\";",
-        "\tvar dept = m.group_id && m.group_id.displayName ? \" (\" + m.group_id.displayName + \")\" : \"\";",
-        "\treturn role + dept;",
-        "}).filter(function (r) { return r; });",
+        "\treturn role + \" (\" + m.group_id.displayName + \")\";",
+        "});",
         "return roles.length ? who + \", \" + roles.join(\"; \") : who;"
       ],
       "exposed" : false
