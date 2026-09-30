@@ -570,11 +570,12 @@
     "signedInAs" : {
       "type" : "expression",
       "value" : [
-        "// name of the logged-in user, plus their QNAB role(s) and department (QNAB groups only)",
+        "// name of the logged-in user, plus their role(s) in QNAB departments only (ignores leftover sample-organisation groups)",
+        "var qnabDepartments = [\"/qnab\", \"/qnab/People & Services\", \"/qnab/People & Services/HR\", \"/qnab/Legal & Compliance\", \"/qnab/Technology & Data\", \"/qnab/Technology & Data/IT Infra\", \"/qnab/Technology & Data/Cybersecurity\", \"/qnab/Technology & Data/Digital\", \"/qnab/Finance\", \"/qnab/Banking Operations\"];",
         "if (!$data.userInfo) { return \"\"; }",
         "var who = ($data.userInfo.firstname + \" \" + $data.userInfo.lastname).trim();",
         "var roles = ($data.userMemberships || []).filter(function (m) {",
-        "\treturn m.group_id && m.group_id.path && m.group_id.path.indexOf(\"/qnab\") === 0;",
+        "\treturn m.group_id && qnabDepartments.indexOf(m.group_id.path) >= 0;",
         "}).map(function (m) {",
         "\tvar role = m.role_id && m.role_id.displayName ? m.role_id.displayName : \"\";",
         "\treturn role + \" (\" + m.group_id.displayName + \")\";",
