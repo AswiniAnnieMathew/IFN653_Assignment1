@@ -185,38 +185,70 @@
                   "lg" : 12
                 },
                 "propertyValues" : {
-                  "labelHidden" : {
+                  "cssClasses" : {
                     "type" : "constant",
-                    "value" : false
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
                     "value" : false
                   },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
                   "disabled" : {
+                    "type" : "expression",
+                    "value" : "false"
+                  },
+                  "required" : {
+                    "type" : "expression",
+                    "value" : "true"
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "labelHidden" : {
                     "type" : "constant",
                     "value" : false
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "I declare the prospect's Staff KYC declarations (birthdate; financial, legal and political interests) have been verified and are updated in the HR system"
+                    "value" : "Staff KYC outcome (declarations checked against the compliance system)"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "placeholder" : {
+                    "type" : "interpolation",
+                    "value" : "Select Passed or Failed"
+                  },
+                  "availableValues" : {
+                    "type" : "expression",
+                    "value" : "[\"Passed\", \"Failed\"]"
+                  },
+                  "displayedKey" : {
+                    "type" : "expression",
+                    "value" : ""
+                  },
+                  "returnedKey" : {
+                    "type" : "expression",
+                    "value" : ""
+                  },
+                  "value" : {
+                    "type" : "variable",
+                    "value" : "formInput.kycOutcome"
                   },
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "formInput.kycVerified"
                   }
                 },
                 "reference" : "fdcf4793-78dc-47c2-a8a5-9e276ce005af",
                 "hasValidationError" : false,
-                "id" : "pbCheckbox",
+                "id" : "pbSelect",
                 "description" : ""
               }
             ],
@@ -374,7 +406,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid || !formInput.contractSigned || !formInput.kycVerified || !formInput.kycReference"
+                    "value" : "$form.$invalid || !formInput.contractSigned || !formInput.kycOutcome || !formInput.kycReference"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -461,7 +493,7 @@
       "value" : [
         "{",
         "  \"contractSigned\" : false,",
-        "  \"kycVerified\" : false,",
+        "  \"kycOutcome\" : null,",
         "  \"kycReference\" : \"\"",
         "}"
       ],
@@ -487,8 +519,8 @@
       "value" : [
         "return {",
         "\tcontractSigned: $data.formInput.contractSigned,",
-        "\tkycVerified: $data.formInput.kycVerified,",
         "\tprospectInput: {",
+        "\t\tkycOutcome: $data.formInput.kycOutcome,",
         "\t\tkycReference: $data.formInput.kycReference",
         "\t}",
         "};"

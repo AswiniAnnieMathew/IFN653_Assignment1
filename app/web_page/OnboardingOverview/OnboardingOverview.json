@@ -1172,6 +1172,7 @@
         "\treturn \"Working login, working email and finance profile set up\" + ($data.prospect && $data.prospect.employingEntity === \"DBY\" ? \" (DBY finance profile set up automatically).\" : \" (APE finance profile set up by Finance).\");",
         "}",
         "var p = $data.prospect || {};",
+        "if (p.kycOutcome === \"Failed\") { return \"Staff KYC not passed: the hire was cancelled.\"; }",
         "if (p.offerResponse === \"Declined\") { return \"Offer declined by the prospect.\"; }",
         "if (p.offerResponse === \"Accepted\") {",
         "\treturn p.employingEntity === \"DBY\" ? \"DBY online signing link expired: contract and Staff KYC not completed within 7 days.\" : \"APE paper contract and Staff KYC not returned within 7 days.\";",

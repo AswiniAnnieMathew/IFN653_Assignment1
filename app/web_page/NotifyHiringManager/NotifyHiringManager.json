@@ -791,6 +791,7 @@
       "type" : "expression",
       "value" : [
         "if (!$data.prospect) { return \"\"; }",
+        "if ($data.prospect.kycOutcome === \"Failed\") { return \"Staff KYC not passed: the hire cannot proceed\"; }",
         "if ($data.prospect.offerResponse === \"Declined\") { return \"Offer declined by the prospect\"; }",
         "if ($data.prospect.offerResponse === \"Accepted\") {",
         "\tif ($data.prospect.employingEntity === \"DBY\") { return \"DBY online signing link expired: contract not signed and KYC not completed within 7 days\"; }",

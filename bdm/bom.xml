@@ -11,10 +11,10 @@
                     <description>Staff number created manually in VAXWORKER by HR. Source: scenario. Set by: Assign staff number.</description>
                 </field>
                 <field type="STRING" length="255" name="workEmail" nullable="true" collection="false">
-                    <description>Work email, also the Microsoft login name. Source: scenario. Set by: Create email and login.</description>
+                    <description>Work email, also the Microsoft login name. Set by: Create email and login.</description>
                 </field>
                 <field type="LOCALDATE" length="255" name="loginCreatedDate" nullable="true" collection="false">
-                    <description>Date the email and login were created (automatic), used for the start-date-to-login KPI. Source: EXTRA FIELD. Set by: Create email and login.</description>
+                    <description>Date the email and login were created (automatic), used for the startdate to login KPI. Source: EXTRA FIELD. Set by: Create email and login.</description>
                 </field>
             </fields>
             <uniqueConstraints/>
@@ -25,7 +25,7 @@
             <description>Prospective hire's offer, contract and KYC details.</description>
             <fields>
                 <field type="STRING" length="255" name="prospectName" nullable="true" collection="false">
-                    <description>Prospective employee full name. Source: scenario. Set by: Initiate hire request.</description>
+                    <description>Prospective employee full name. Set by: Initiate hire request.</description>
                 </field>
                 <field type="STRING" length="255" name="hiringManagerName" nullable="true" collection="false">
                     <description>Hiring manager who raised the request (logged-in user). Source: EXTRA FIELD. Set by: Initiate hire request.</description>
@@ -37,25 +37,25 @@
                     <description>Offered annual salary (pay conditions of the offer). Source: scenario. Set by: Initiate hire request, Revise offer.</description>
                 </field>
                 <field type="STRING" length="255" name="employmentType" nullable="true" collection="false">
-                    <description>Full-time, Part-time, Fixed-term or Casual. Source: EXTRA FIELD. Set by: Initiate hire request, Revise offer.</description>
+                    <description>Full-time, Part-time, Fixed-term or Casual. EXTRA FIELD. Set by: Initiate hire request, Revise offer.</description>
                 </field>
                 <field type="STRING" length="255" name="employingEntity" nullable="true" collection="false">
-                    <description>Legal entity: APE or DBY (derived from department), drives contract and finance routing. Source: scenario. Set by: Initiate hire request.</description>
+                    <description>Legal entity: APE or DBY (derived from department), drives contract and finance routing.  Set by: Initiate hire request.</description>
                 </field>
                 <field type="STRING" length="255" name="offerResponse" nullable="true" collection="false">
-                    <description>Prospect response: Accepted, Declined or Negotiate. Source: scenario. Set by: Record prospect response.</description>
+                    <description>Prospect response: Accepted, Declined or Negotiate. Set by: Record prospect response.</description>
                 </field>
                 <field type="TEXT" length="255" name="negotiationNotes" nullable="true" collection="false">
-                    <description>Negotiation log: prospect requests and hiring manager revisions, appended each round. Source: scenario. Set by: Record prospect response, Revise offer.</description>
+                    <description>Negotiation log: prospect requests and hiring manager revisions, appended each round. Set by: Record prospect response, Revise offer.</description>
                 </field>
                 <field type="STRING" length="255" name="kycReference" nullable="true" collection="false">
-                    <description>Compliance system Staff KYC record number (KYC details are not stored). Source: EXTRA FIELD. Set by: Verify signed contract / Receive online signature.</description>
+                    <description>Compliance system Staff KYC record number (KYC details are not stored). EXTRA FIELD. Set by: Verify signed contract / Receive online signature.</description>
                 </field>
                 <field type="STRING" length="255" name="kycOutcome" nullable="true" collection="false">
-                    <description>Staff KYC result: Passed or Failed, a failed KYC cancels the hire. Source: scenario. Set by: Verify signed contract / Receive online signature.</description>
+                    <description>Staff KYC result: Passed or Failed, a failed KYC cancels the hire. Set by: Verify signed contract / Receive online signature.</description>
                 </field>
                 <field type="LOCALDATE" length="255" name="startDate" nullable="true" collection="false">
-                    <description>Contract start date: contract issue date + 21 days. Source: scenario. Set by: Draft and issue contract.</description>
+                    <description>Contract start date: contract issue date + 21 days. Set by: Draft and issue contract.</description>
                 </field>
             </fields>
             <uniqueConstraints/>

@@ -1,10 +1,10 @@
 {
-  "id" : "DBYCaptureContractSignatureForm",
-  "name" : "DBYCaptureContractSignatureForm",
+  "id" : "newForm",
+  "name" : "newForm",
   "type" : "form",
-  "uuid" : "58f67c80-ba4f-4994-a982-adc81940a6d1",
+  "uuid" : "2bfcb77f-667f-4d31-8662-3ec7b493e0d4",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1790771787496,
+  "lastUpdate" : 1790857206443,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "06d173ae-0ef1-41d0-a842-143ad31a038d",
+        "reference" : "2f905dfd-d112-4504-a9f1-94e6a2028c75",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -42,7 +42,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "DBY e-signing platform: signature and KYC callback (simulation)"
+                  "value" : "{{ task.displayName }}"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -53,7 +53,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "224b5820-8f88-4c3d-bc34-3717da0c4d89",
+              "reference" : "bbbf9dec-e55a-4335-b7d9-f991cedbe9f1",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -69,6 +69,10 @@
                 "lg" : 12
               },
               "propertyValues" : {
+                "allowHtml" : {
+                  "type" : "constant",
+                  "value" : true
+                },
                 "labelHidden" : {
                   "type" : "constant",
                   "value" : true
@@ -86,7 +90,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "<div style=\"background:#eef3fb;border-left:4px solid #1f3864;padding:6px 10px;margin-bottom:8px\">&#128100; <strong>Signed in as {{signedInAs}}</strong></div>Simulates the DBY e-signing platform confirming, via the Bonita REST API, that the prospect has signed the contract online and completed KYC. Only the e-signing service account can see this task."
+                  "value" : "<div style=\"background:#eef3fb;border-left:4px solid #1f3864;padding:6px 10px;margin-bottom:8px\">&#128100; <strong>Signed in as {{signedInAs}}</strong></div>{{ task.displayDescription }}"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -101,7 +105,7 @@
                   "value" : true
                 }
               },
-              "reference" : "0113fdbb-3af3-4b9c-a337-d66c66a270b2",
+              "reference" : "d40477b2-e848-431a-b459-9f82c3680dd4",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -112,12 +116,220 @@
     ],
     [
       {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Prospect"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<strong>New employee:</strong> {{prospect.prospectName}} ({{prospect.department}}, {{prospect.employingEntity}})"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "9c9a90e5-d768-4ac1-81b3-c067ce619d72",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Start date"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<strong>Start date:</strong> {{startDateText}}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "179620f1-66db-4437-adac-a6b9a2027acb",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Staff number"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<strong>Staff number:</strong> {{employee.staffNumber}}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "8aba031b-0cba-4ac3-aac1-3470ba92ddd6",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "allowHTML" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Outstanding"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "text" : {
+            "type" : "interpolation",
+            "value" : "<strong>Outstanding:</strong> email and login not yet created by IT Support. Hiring manager to inform: {{prospect.hiringManagerName}}"
+          },
+          "alignment" : {
+            "type" : "constant",
+            "value" : "left"
+          }
+        },
+        "reference" : "577c1b8b-5438-4a68-ac1c-93b647d23cfd",
+        "hasValidationError" : false,
+        "id" : "pbText"
+      }
+    ],
+    [
+      {
         "type" : "formContainer",
         "dimension" : {
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "6e210a8b-260d-4793-8065-8fcac6da604a",
+        "reference" : "4b6d79bd-3fd1-41b5-94c8-0e4151a53978",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -126,222 +338,10 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "da923342-c8c7-4506-a71f-fc095a0eb4eb",
+          "reference" : "67983b25-d128-4a7a-ba85-c54b04c80ab0",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "disabled" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Contract signed online by the prospect"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "formInput.contractSigned"
-                  }
-                },
-                "reference" : "8133f77d-0ee8-48ae-95ab-5d95313f10e8",
-                "hasValidationError" : false,
-                "id" : "pbCheckbox",
-                "description" : ""
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "md" : 12,
-                  "sm" : 12,
-                  "xs" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "disabled" : {
-                    "type" : "expression",
-                    "value" : "false"
-                  },
-                  "required" : {
-                    "type" : "expression",
-                    "value" : "true"
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Staff KYC outcome (reported by the e-signing platform)"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "placeholder" : {
-                    "type" : "interpolation",
-                    "value" : "Select Passed or Failed"
-                  },
-                  "availableValues" : {
-                    "type" : "expression",
-                    "value" : "[\"Passed\", \"Failed\"]"
-                  },
-                  "displayedKey" : {
-                    "type" : "expression",
-                    "value" : ""
-                  },
-                  "returnedKey" : {
-                    "type" : "expression",
-                    "value" : ""
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "formInput.kycOutcome"
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "d7b9dfae-642a-42b6-aed0-8274488c445d",
-                "hasValidationError" : false,
-                "id" : "pbSelect",
-                "description" : ""
-              }
-            ],
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "required" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "minLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "maxLength" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "readOnly" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Compliance system KYC reference"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "placeholder" : {
-                    "type" : "interpolation",
-                    "value" : "Reference sent by the e-signing platform, e.g. KYC-2026-0042"
-                  },
-                  "value" : {
-                    "type" : "variable",
-                    "value" : "formInput.kycReference"
-                  },
-                  "debounce" : {
-                    "type" : "constant",
-                    "value" : 0
-                  },
-                  "type" : {
-                    "type" : "constant",
-                    "value" : "text"
-                  },
-                  "min" : {
-                    "type" : "constant"
-                  },
-                  "max" : {
-                    "type" : "constant"
-                  },
-                  "step" : {
-                    "type" : "constant",
-                    "value" : 1
-                  },
-                  "dimension" : {
-                    "type" : "constant",
-                    "value" : 12
-                  }
-                },
-                "reference" : "16764db9-5d2c-461c-b664-9fc9ddaf26c8",
-                "hasValidationError" : false,
-                "id" : "pbInput"
-              }
-            ],
             [
               {
                 "type" : "component",
@@ -369,7 +369,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Confirm signature and KYC received"
+                    "value" : "Escalation handled"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -406,7 +406,7 @@
                   },
                   "disabled" : {
                     "type" : "expression",
-                    "value" : "$form.$invalid || !formInput.contractSigned || !formInput.kycOutcome || !formInput.kycReference"
+                    "value" : "$form.$invalid"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -417,7 +417,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "2e1a37a6-bedf-41bb-90c0-1b1a03237852",
+                "reference" : "cde4409a-7589-42ad-b03a-fef21f198e36",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -458,7 +458,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "<strong>The callback could not be submitted</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
+                    "value" : "<strong>The task could not be completed</strong>\n<br/>\n{{formOutput._submitError.message}}\n{{submit_errors_list}}"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -469,7 +469,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "a9a735a3-c0d4-4a3b-ba9d-09282f3c361a",
+                "reference" : "7bd95686-d9cd-48af-905a-b403452ab8a9",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -485,17 +485,6 @@
       "type" : "url",
       "value" : [
         "../API/bpm/userTask/{{taskId}}"
-      ],
-      "exposed" : false
-    },
-    "formInput" : {
-      "type" : "json",
-      "value" : [
-        "{",
-        "  \"contractSigned\" : false,",
-        "  \"kycOutcome\" : null,",
-        "  \"kycReference\" : \"\"",
-        "}"
       ],
       "exposed" : false
     },
@@ -517,13 +506,7 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "return {",
-        "\tcontractSigned: $data.formInput.contractSigned,",
-        "\tprospectInput: {",
-        "\t\tkycOutcome: $data.formInput.kycOutcome,",
-        "\t\tkycReference: $data.formInput.kycReference",
-        "\t}",
-        "};"
+        "return {};"
       ],
       "exposed" : false
     },
@@ -538,6 +521,28 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "prospect" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.prospect_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "employee" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.employee_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "startDateText" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.prospect || !$data.prospect.startDate) { return \"\"; }",
+        "return new Date($data.prospect.startDate + \"T00:00:00\").toLocaleDateString(\"en-AU\", { day: \"numeric\", month: \"short\", year: \"numeric\" });"
       ],
       "exposed" : false
     },
@@ -582,16 +587,16 @@
   },
   "assets" : [
     {
-      "id" : "7ddea5ec-d821-4016-8010-a865e4754bab",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "d275bbfe-8647-46af-bfe0-ef83106816a5",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "79b538a0-3fce-4180-970d-e914781ed3a6",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "200bcab2-4286-43b1-9df8-50d8170530a8",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }
