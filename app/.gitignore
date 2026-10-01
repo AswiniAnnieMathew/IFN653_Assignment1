@@ -1,6 +1,6 @@
 /src-providedGroovy
 /h2_database
-/process_configurations
+#process_configurations is shared so the team gets the same actor mapping
 
 #provided web widgets:
 /web_widgets/pb*/
